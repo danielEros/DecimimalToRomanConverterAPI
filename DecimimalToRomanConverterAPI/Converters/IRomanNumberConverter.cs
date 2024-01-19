@@ -8,7 +8,7 @@ namespace DecimimalToRomanConverterAPI.Converters
         /// Converts a roman number to decimal
         /// </summary>
         /// <param name="romanNumber">The roman number to be converted</param>
-        /// <returns>RomanToDecimalDTO with the converted number or the error message</returns>
+        /// <returns>RomanToDecimalDTO with the converted number or the error message for wrong input values</returns>
         RomanToDecimalDTO RomanToDecimal ( string romanNumber );
     }
 }

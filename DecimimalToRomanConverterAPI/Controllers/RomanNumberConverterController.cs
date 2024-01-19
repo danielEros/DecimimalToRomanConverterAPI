@@ -1,7 +1,6 @@
 using DecimimalToRomanConverterAPI.Converters;
 using DecimimalToRomanConverterAPI.DTOs;
 using Microsoft.AspNetCore.Mvc;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace DecimimalToRomanConverterAPI.Controllers
 {

@@ -48,7 +48,7 @@ namespace DecimimalToRomanConverterAPI.Converters
                 int convertedNumber = 0;
                 for ( int i = 0 ; i < romanNumber.Length ; i++ )
                 {
-                    // if the current number is bigger than the next one or this is the last number: add
+                    // if this is the last number or if the current number is larger or equal to the next one: add
                     if ( i == romanNumber.Length - 1 || _RomanNumberDict [ romanNumber [ i ] ] >= _RomanNumberDict [ romanNumber [ i + 1 ] ] )
                     {
                         convertedNumber += _RomanNumberDict [ romanNumber [ i ] ];
