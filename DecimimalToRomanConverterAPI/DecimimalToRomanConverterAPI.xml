@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DecimimalToRomanConverterAPI</name>
+    </assembly>
+    <members>
+        <member name="M:DecimimalToRomanConverterAPI.Controllers.RomanNumberConverterController.ConvertRomanToDecimal(DecimimalToRomanConverterAPI.DTOs.RequestDTO)">
+            <summary>
+            Converts the provided roman number to decimal number
+            </summary>
+            <param name="input">The roman number to be converted</param>
+            <remarks>
+            Sample request:
+                GET romantodecimal/romantodecimal?RomanNumber=VII
+                
+            Sample result:
+                {
+                    "Result": 7,
+                    "ErrorMeassage": ""
+                }
+             
+            Limitations:
+                The input roman number shuold be between 1 and 3999.
+                Consequelently the maximum length of the input string is 15 (the longest roman number in the above range is 3888
+                (MMMDCCCLXXXVIII) with character length of 15.
+                The input should only contain the following letters: I, V, X, L, C, D, M (case sensitive).
+                The input should be a valid roman numnber (i.e. IIV is invalid).
+            </remarks> 
+            <returns></returns>
+            <response code="200">Returns the converted decimal number</response>
+            <response code="400">If the input srting is not a valid roman number</response>
+            <response code="500">In case of an unexpected server error</response>
+        </member>
+        <member name="M:DecimimalToRomanConverterAPI.Converters.IRomanNumberConverter.RomanToDecimal(System.String)">
+            <summary>
+            Converts a roman number to decimal
+            </summary>
+            <param name="romanNumber">The roman number to be converted</param>
+            <returns>RomanToDecimalDTO with the converted number or the error message</returns>
+        </member>
+    </members>
+</doc>
